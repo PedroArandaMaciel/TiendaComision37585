@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <header class="headerGrid">
+        <div class="divLogo">
+            <a href="../index.html"><img src="../img/logo.PNG" alt="logo pagina" id="logo"></a>
+        </div>
+        <section class="sectionBuscar">
+            <form action="">
+                <label class="buscarProductoText" for="barraSearch">Buscar producto</label>
+                <input type="search" id="barraSearch" class="searchProperties" name="barraSearch" placeholder="Buscar">
+            </form>
+        </section>
+        <div>
+            <nav>
+                <ul>
+                    <li class="goHomeNav">
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="registro.html">Crear Cuenta</a>
+                    </li>
+                    <li>
+                        <a href="sesion.html">Iniciar Sesion</a>
+                    </li>
+                    <li>
+                        <a href="carrito.html"><img id="carritoImg" src="../img/carritoChico.jpg" alt="">Carrito</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="registroSeccion">
+            <article class="registroArticulo">
+                <form action="">
+                    <div>
+                        <input class="inputProperties" type="text" name="nombre" placeholder="Nombre" size="44"
+                            required><br>
+                        <input class="inputProperties" type="text" name="apellido" placeholder="Apellido" size="44"
+                            required><br>
+                        <input class="inputProperties" type="number" name="edad" placeholder="Edad" min="16" max="99"
+                            required><br>
+                        <label for="hm">Sexo:
+                            <input type="radio" name="hm" value="h" id="hm"> Hombre
+                            <input type="radio" name="hm" value="m" id="hm"> Mujer
+                        </label><br>
+                        <label for="email">Email (preferencia gmail)
+                            <input class="inputProperties" type="email" name="email" id="email"
+                                placeholder="ejemplo@gmail.com" required>
+                        </label><br>
+                        <label for="pass">
+                            <input class="inputProperties" type="password" name="pass" id="pass"
+                                placeholder="Defina una contraseña" required>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Le gustaria tener acceso a <a href="noticias.html" target="_blank">Noticias Confiables</a>?
+                            (actualmente en version beta)</p>
+                        <div>Si
+                            <input type="radio" name="valor" value="si">
+                        </div>
+                        <div>No
+                            <input type="radio" name="valor" value="no">
+                        </div>
+                    </div><br>
+                    <div>
+                        <label for="indicaciones">Como conociste Tienda Confiable? (opcional) <br>
+                            <textarea id="textLabelRegistro" name="indicaciones" id="indicaciones" cols="44"
+                                rows="10"></textarea>
+                        </label><br>
+                        <label for="localidad">Selecione centro de reparto mas cercano</label>
+                        <select name="localidad" id="localidad">
+                            <option value="lom">Lomas de Zamora</option>
+                            <option value="tem">Temperley</option>
+                            <option value="lan">Lanus</option>
+                        </select>
+                        <p>Acepto todos los <a href="https://www.coderhouse.com/legales" target="_blank"
+                                rel="noopener noreferrer">Terminos y Condiciones</a>
+                            <input type="checkbox" name="acepta" value="1" required>
+                        </p>
+                        <input id="enviarFormularioRegistro" type="submit" name="enviarFormulario" value="Registrarse">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="FooterFlex">
+            <div class="alinearElementosFlex">
+                <div class="alinearElementosFlex">
+                    <div class="alinearElementosFlex">
+                        <p class="footerAceptamosText">Aceptamos:
+                        </p>
+                        <a class="footerMerPago" href="https://www.mercadopago.com.ar/" target="_blank">MercadoPago</a>
+                    </div>
+                    <div class="alinearElementosFlex">
+                        <p class="footerEnEfectivo">
+                            Efectivo
+                        </p>
+                    </div>
+                </div>
+                <div class="alinearElementosFlex">
+                    <img class="footerCredCard" src="../img/tarjetas.jpg" alt="tarjeta Visa">
+                </div>
+            </div>
+            <div>
+                <div class="alinearElementosFlex">
+                    <a href="https://www.instagram.com/coderhouse/">
+                        <img class="footerLogoInsta alinearElementosFlex" src="../img/insta.jpg" alt="logo instagram">
+                    </a>
+                    <a href="https://twitter.com/coderhouse?lang=en">
+                        <img class="footerLogoTw alinearElementosFlex" src="../img/twitter.jpg" alt="logo twitter">
+                    </a>
+                </div>
+                <div class="alinearElementosFlex">
+                    <p>
+                        <a class="footerComprando" href="https://www.coderhouse.com/preguntas-frecuentes">Ayuda
+                            comprando</a>
+                        <a class="footerVendiendo" href="https://www.coderhouse.com/preguntas-frecuentes">Ayuda
+                            vendiendo</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

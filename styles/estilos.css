@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+}
+header, footer{
+    background-color: rgba(43, 19, 177, 0.445);
+}
+footer{
+    height: 80px;
+}
+body{
+    background-color: rgba(43, 19, 177, 0.26);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main{
+    min-height: 100vh;
+}
+#logo{
+    position: relative;
+    top: 8px;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    margin: 3px;
+}
+#carritoImg{
+   display: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.searchProperties{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 30px;
+}
+.seccionCategoriaFlex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.seccionCategoriaProperties{
+    font-size: 12px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgba(255, 255, 0, 0.637);
+}
+.imagenProducto{
+    height: 100px;
+    width: 100px;
+}
+h2{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.315);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+    font-size: 18px;
+}
+.letraProducto{
+    font-size: 9px;
+}
+.contenedorProducto{
+  background-color: rgba(172, 255, 47, 0.212);  
+  padding-bottom: 10px;
+  margin: 10px;
+}
+.productoFlex{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.FooterFlex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.alinearElementosFlex{
+    display: inline-block;
+}
+.footerLogoInsta{
+    border: 1px solid black;
+    position: relative;
+    top: 4px;
+    width: 15px;
+    height: 15px;  
+    border-radius: 10px;
+    margin-left: 6px;
+}
+.footerLogoTw{
+    border: 1px solid black;
+    position: relative;
+    top: 4px;
+    width: 15pxpx;
+    height: 15px;
+    border-radius: 10px;
+}
+.footerMerPago{
+    border: 1px solid black;
+    font-size: 10px;
+    border-radius: 20px;
+    padding: 2px;
+    background-color: rgba(0, 255, 255, 0.212);
+}
+.footerEnEfectivo{
+    width: 60px;
+    font-size: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 2px;
+    background-color: rgba(0, 255, 255, 0.212);
+}
+.footerCredCard{
+    position: relative;
+    top: 4px;
+    height: 15px;
+    border-radius: 10px;
+}
+.footerComprando{
+    border: 1px solid black;
+    font-size: 10px;
+    padding: 2px;
+    background-color: rgba(0, 255, 255, 0.212);
+    border-radius: 10px;  
+    display: none;
+    background-image: url(../img/fondoBotones.jpg);
+}
+.footerVendiendo{
+    border: 1px solid black;
+    font-size: 10px;
+    padding: 2px;
+    background-color: rgba(0, 255, 255, 0.212);
+    border-radius: 10px;   
+    display: none;
+    background-image: url(../img/fondoBotones.jpg);
+}
+.goHomeNav{
+    display: none;
+}
+.categoriaText{
+    display: none;
+}
+.buscarProductoText{
+    display: none;
+}
+.footerAceptamosText{
+    display: none;
+}
+/*Propiedades registro.html*/
+.inputProperties{
+    width: 80%;
+    padding: 5px;
+    border: none;
+    margin: 3px;
+}
+.registroSeccion{
+    background-image: url(../img/maderaFondo.jpg);
+    display: flex;
+    justify-content: center;
+}
+.registroArticulo{
+    background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
+    padding: 30px;
+    height: 100vh;
+}
+#enviarFormularioRegistro{
+    padding: 5px;
+    width: 100px;
+    position: relative;
+    top: 15px;
+    left: 30%;
+}
+#textLabelRegistro{
+    height: 100px;
+    width: 80%;
+    border: none;
+}
+/*Propiedades sesion.html*/
+.iniciarSesionDiv{
+    background-image: url(../img/maderaFondo.jpg);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.iniciarSesionSeccion{
+    background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    height: 200px;
+}
+.IniciarSesioncentrarElementos{
+    position: relative;
+    justify-content: center;
+}
+/*Propiedades carrito.html*/
+.carritoSectionImg{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.carritoSectionLista{
+    padding: 10px;
+    margin-left: 20px;
+    border: 1px solid black;
+    font-size: small;
+}
+#carritoFlex{
+    display: flex;
+    justify-content: start;
+}
+.carritoSectionFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.carritoSectionVacio{
+    font-size: small;
+    position: relative;
+    bottom: 50vh;
+}
+.alinearElementos{
+    display: inline-block;
+    margin-top: 5px;
+}
+/*Propiedades noticias.html*/
+.articuloNoticia{
+    background-color: rgb(205, 205, 205);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.seccionNoticia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#articuloNoticiasTitulo{
+    text-align: center;
+    font-size: larger;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.articuloNoticiasVideo{
+    margin-top: 15px;
+    width: 95%;
+    height: 315px;
+}
+.articuloNoticiasParrafo{
+    font-size: small;
+    margin-top: 80px;
+}
+header{
+    grid-area: header;
+}
+.divLogo{
+    grid-area: logo;
+}
+nav{
+    grid-area: nav;
+}
+.sectionBuscar{
+    grid-area: buscador;
+}
+.sectionCategoria{
+    grid-area: categoria;
+}
+.sectionVendido{
+    grid-area: vendido;
+}
+.sectionOferta{
+    grid-area: oferta;
+}
+footer{
+    grid-area: footer;
+}
+.headerGrid{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "logo nav"
+    "buscador buscador";
+}
+.mainDivGrid{
+    display: grid;
+    grid-template-areas: 
+    "categoria"
+    "oferta"
+    "vendido";
+}
+@media (min-width:480px){
+    .headerGrid{
+        grid-template-columns: 2fr 6fr ;
+        grid-template-areas: 
+        "logo nav nav"
+        "buscador buscador buscador";
+    }
+    .mainDivGrid{
+        grid-template-areas: 
+        "categoria"
+        "vendido"
+        "oferta";
+    }
+    #logo{
+        height: 50px;
+        width: 100px;
+    }
+    .footerComprando{ 
+        display:initial;
+    }
+    .footerVendiendo{  
+        display: initial;
+    }
+}
+@media (min-width:768px){
+    .headerGrid{
+        grid-template-columns: 2fr 6fr ;
+        grid-template-areas: 
+        "logo nav nav"
+        "buscador buscador buscador";
+    }
+    .mainDivGrid{
+        grid-template-columns: 1fr 6fr;
+        grid-template-areas: 
+        "categoria vendido"
+        "categoria vendido"
+        "categoria oferta";
+    }
+    #carritoImg{
+        display: initial;
+        height: 15px;
+        width: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    .goHomeNav{
+        display: initial;
+    }
+    #logo{
+        height: 70px;
+        width: 140px;
+    }
+    .categoriaText{
+        display: initial;
+        color: rgba(0, 0, 0, 0.315);
+        font-size: 20px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 255, 0.178);
+    }
+    .sectionCategoria{
+        border: 1px solid black;
+    }
+    .seccionCategoriaFlex{
+        flex-direction: column;
+        }
+    .seccionCategoriaProperties{
+        padding: 10px;
+        font-size: 16px;    
+    }
+    nav ul li{
+        font-size: 16px;
+        border: 1px solid black;
+        padding: 6px;
+        margin-bottom: 20px;
+    }
+    h2{
+        text-align: start;
+        margin-left: 10px;
+        margin-top: 37px;
+        border-bottom: none;
+    }
+    .imagenProducto{
+        height: 150px;
+        width: 150px;
+    }
+    .letraProducto{
+        font-size: 14px;
+    }
+    footer{
+        height: 100px;
+    }
+    .footerLogoInsta{
+        top: 30px;
+       height: 30px;
+       width: 30px;
+    }
+    .footerLogoTw{
+        top: 30px;
+        height: 30px;
+        width: 30px;
+    }
+    .footerMerPago{
+        position: relative;
+        top: 25px;
+        font-size: 14px;
+    }
+    .footerEnEfectivo{
+        position: relative;
+        top: 25px;
+        font-size: 14px;
+    }
+    .footerCredCard{
+        top: 34px;
+        height: 26px;
+    }
+    .footerComprando{
+        position: relative;
+        top: 20px;
+        font-size: 14px;   
+    }
+    .footerVendiendo{
+        position: relative;
+        top: 20px;
+        font-size: 14px;
+    }
+    .carritoSectionImg{
+        width: 80px;
+        height: 80px;
+    }
+    .carritoSectionLista{
+        font-size: 18px;
+    }
+    .carritoSectionVacio{
+        font-size: 16px;
+    }
+    .articuloNoticiasVideo{
+        width: 50%;
+        height: 415px;
+    }
+}
+@media (min-width:1024px){
+    .headerGrid{
+        grid-template-columns: 1fr 4fr 4fr ;
+        grid-template-areas: 
+        "logo buscador nav"        
+    }
+    .buscarProductoText{
+        display: initial;
+        font-size: 13px;
+    }
+    .footerAceptamosText{
+        display: initial;
+        position: relative;
+        padding: 10px;
+        top: 23px;
+        font-size: 14px;
+        left: 5px;
+    }
+    .sectionBuscar{
+        position: relative;
+        top: 20px;
+    }
+    #barraSearch{
+        width: 70%;
+    }
+}
