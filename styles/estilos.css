@@ -30,29 +30,37 @@ main{
     min-height: 100vh;
 }
 #logo{
-    position: relative;
-    top: 8px;
     height: 40px;
     width: 80px;
     border-radius: 5px;
-    margin: 3px;
+    margin: 10px;
 }
 #carritoImg{
    display: none;
 }
+.navFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 5px;
-    margin-top: 15px;
-    font-size: 12px;
+    justify-content: space-between;
+}
+nav ul li{
+    margin-top: 8px;
 }
 nav ul li:hover{
     transform: translate(5px, 5px);
     background-color: rgba(0, 0, 255, 0.089);
+    color: white;
     border: none;
     border-radius: 5px;
+}
+nav ul li a:hover{
+    color: rgba(255, 255, 255, 0.664);
 }
 .searchProperties{
     margin-top: 5px;
@@ -328,6 +336,9 @@ footer{
     "vendido";
 }
 @media (min-width:480px){
+    nav ul li{
+        margin-top: 15px;
+    }
     .headerGrid{
         grid-template-columns: 2fr 6fr ;
         grid-template-areas: 
@@ -360,8 +371,8 @@ footer{
     }
     .mainDivGrid{
         grid-template-columns: 1fr 6fr;
+        grid-template-rows: 2fr 5fr;
         grid-template-areas: 
-        "categoria vendido"
         "categoria vendido"
         "categoria oferta";
     }
@@ -401,6 +412,7 @@ footer{
     }
     .sectionCategoria{
         border: 1px solid black;
+        min-height: 100vh;
     }
     .seccionCategoriaFlex{
         flex-direction: column;
@@ -413,7 +425,7 @@ footer{
         font-size: 16px;
         border: 1px solid black;
         padding: 6px;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
     h2{
         text-align: start;
@@ -481,6 +493,9 @@ footer{
     }
 }
 @media (min-width:1024px){
+    nav ul{
+        justify-content: space-evenly;
+    }
     .headerGrid{
         grid-template-columns: 1fr 4fr 4fr ;
         grid-template-areas: 
@@ -499,8 +514,9 @@ footer{
         left: 5px;
     }
     .sectionBuscar{
-        position: relative;
-        top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
     }
     #barraSearch{
         width: 70%;
