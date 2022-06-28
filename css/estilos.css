@@ -6,6 +6,9 @@
     color: black;
     list-style-type: none;
 }
+.btn{
+    color: black;
+}
 .propertiesLogoTw{
     height: 60px;
     width: 60px;
@@ -35,24 +38,13 @@ main{
     height: 40px;
     width: 80px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px 20px 5px 5px;
 }
 #carritoImg{
    display: none;
 }
-.navFlex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 10px;
-}
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-nav ul li{
-    margin-top: 8px;
+.btnOcultar{
+    display: none;
 }
 nav ul li:hover{
     transform: translate(5px, 5px);
@@ -137,7 +129,7 @@ h2{
 .registroArticulo{
     background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
     padding: 30px;
-    height: 100vh;
+    min-height: 100vh;
 }
 #enviarFormularioRegistro{
     padding: 5px;
@@ -237,18 +229,6 @@ h2{
     font-size: small;
     margin-top: 80px;
 }
-header{
-    grid-area: header;
-}
-.divLogo{
-    grid-area: logo;
-}
-nav{
-    grid-area: nav;
-}
-.sectionBuscar{
-    grid-area: buscador;
-}
 .sectionCategoria{
     grid-area: categoria;
 }
@@ -258,13 +238,6 @@ nav{
 .sectionOferta{
     grid-area: oferta;
 }
-.headerGrid{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: 
-    "logo nav"
-    "buscador buscador";
-}
 .mainDivGrid{
     display: grid;
     grid-template-areas: 
@@ -273,15 +246,6 @@ nav{
     "vendido";
 }
 @media (min-width:480px){
-    nav ul li{
-        margin-top: 15px;
-    }
-    .headerGrid{
-        grid-template-columns: 2fr 6fr ;
-        grid-template-areas: 
-        "logo nav nav"
-        "buscador buscador buscador";
-    }
     .mainDivGrid{
         grid-template-areas: 
         "categoria"
@@ -294,12 +258,6 @@ nav{
     }
 }
 @media (min-width:768px){
-    .headerGrid{
-        grid-template-columns: 2fr 6fr ;
-        grid-template-areas: 
-        "logo nav nav"
-        "buscador buscador buscador";
-    }
     .mainDivGrid{
         grid-template-columns: 1fr 6fr;
         grid-template-rows: 2fr 5fr;
@@ -307,20 +265,12 @@ nav{
         "categoria vendido"
         "categoria oferta";
     }
-    #carritoImg{
-        display: initial;
-        height: 15px;
-        width: 15px;
-        border: 1px solid black;
-        border-radius: 5px;
-    }
     .goHomeNav{
         display: initial;
     }
     #logo{
         height: 70px;
         width: 140px;
-        margin-left: 20px;
     }
     #logo:hover{
         animation: logo 2s;
@@ -344,6 +294,7 @@ nav{
     .sectionCategoria{
         border: 1px solid black;
         min-height: 100vh;
+        margin: 1px;
     }
     .seccionCategoriaFlex{
         flex-direction: column;
@@ -351,12 +302,6 @@ nav{
     .seccionCategoriaProperties{
         padding: 10px;
         font-size: 16px;    
-    }
-    nav ul li{
-        font-size: 16px;
-        border: 1px solid black;
-        padding: 6px;
-        margin-top: 20px;
     }
     h2{
         text-align: start;
@@ -385,26 +330,16 @@ nav{
         width: 50%;
         height: 415px;
     }
-}
-@media (min-width:1024px){
-    nav ul{
-        justify-content: space-evenly;
-    }
-    .headerGrid{
-        grid-template-columns: 1fr 4fr 4fr ;
-        grid-template-areas: 
-        "logo buscador nav"        
-    }
-    .buscarProductoText{
+    .btnOcultar{
         display: initial;
-        font-size: 13px;
     }
-    .sectionBuscar{
-        display: flex;
-        flex-direction: column;
-        justify-content: center; 
-    }
-    #barraSearch{
-        width: 70%;
+}
+@media (min-width:992px){
+    #carritoImg{
+        display: initial;
+        height: 15px;
+        width: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
     }
 }

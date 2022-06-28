@@ -1,0 +1,26 @@
+{
+  "name": "tiendapedroenriquearandamaciel",
+  "version": "1.0.0",
+  "description": "Aplicando sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroArandaMaciel/TiendaComision37585.git"
+  },
+  "author": "Pedro Enrique Aranda Maciel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroArandaMaciel/TiendaComision37585/issues"
+  },
+  "homepage": "https://github.com/PedroArandaMaciel/TiendaComision37585#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.18"
+  }
+}
