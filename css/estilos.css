@@ -89,6 +89,7 @@ h2{
 }
 .letraProducto{
     font-size: 9px;
+    margin-top: 5px;
 }
 .contenedorProducto{
   background-color: rgba(172, 255, 47, 0.212);  
@@ -104,6 +105,16 @@ h2{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+}
+.pesoSimbolo{
+    font-size: 10px;
+}
+.numeroPrecio{
+    font-size: 20px;
+}
+.precio{
+    display: flex;
+    justify-content: center;
 }
 .goHomeNav{
     display: none;
