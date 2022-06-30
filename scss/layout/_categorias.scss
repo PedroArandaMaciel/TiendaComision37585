@@ -1,0 +1,26 @@
+.sectionCategoria{
+    border: 1px solid black;
+    margin: 1px;
+
+    .seccionCategoriaFlex{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .categoriaText{
+            display: none;
+        }
+
+        .seccionCategoriaProperties{
+            font-size: 12px;
+            padding: 5px;
+            margin: 5px;
+            background-color: $color3;
+
+            &:hover{
+                background-color: $color4;
+            }
+        }
+    }
+
+}

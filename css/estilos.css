@@ -1,356 +1,282 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    list-style-type: none;
-}
-.btn{
-    color: black;
-}
-.propertiesLogoTw{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-ol, ul {
-    padding-left: 0rem;
-}
-header, footer{
-    background-color: rgba(43, 19, 177, 0.445);
-}
-body{
-    background-color: rgba(43, 19, 177, 0.26);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-main{
-    min-height: 100vh;
-}
-#logo{
-    height: 40px;
-    width: 80px;
-    border-radius: 5px;
-    margin: 5px 20px 5px 5px;
-}
-#carritoImg{
-   display: none;
-}
-.btnOcultar{
-    display: none;
-}
-nav ul li:hover{
-    transform: translate(5px, 5px);
-    background-color: rgba(0, 0, 255, 0.089);
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-nav ul li a:hover{
-    color: rgba(255, 255, 255, 0.664);
-}
-.searchProperties{
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 90%;
-    height: 30px;
-}
-.seccionCategoriaFlex{
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul {
+  padding-left: 0rem; }
+
+body {
+  background-color: rgba(43, 19, 177, 0.26);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+
+footer {
+  background-color: rgba(43, 19, 177, 0.445); }
+
+header {
+  background-color: rgba(43, 19, 177, 0.445); }
+
+main {
+  min-height: 100vh; }
+
+#logo {
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  margin: 5px 20px 5px 5px; }
+
+#carritoImg {
+  display: none; }
+
+.btnOcultar {
+  display: none; }
+
+nav ul li:hover {
+  transform: translate(5px, 5px);
+  background-color: rgba(0, 0, 255, 0.089);
+  border: none;
+  border-radius: 5px; }
+
+.sectionCategoria {
+  border: 1px solid black;
+  margin: 1px; }
+  .sectionCategoria .seccionCategoriaFlex {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-}
-.seccionCategoriaProperties{
-    font-size: 12px;
-    padding: 5px;
-    margin: 5px;
-    background-color: rgba(255, 255, 0, 0.637);
-}
-.seccionCategoriaProperties:hover{
-    background-color: rgba(255, 136, 0, 0.349);
-}
-.imagenProducto{
-    height: 100px;
-    width: 100px;
-}
-h2{
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.315);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
-    font-size: 18px;
-}
-.letraProducto{
-    font-size: 9px;
-    margin-top: 5px;
-}
-.contenedorProducto{
-  background-color: rgba(172, 255, 47, 0.212);  
-  padding-bottom: 10px;
-  margin: 20px;
-}
-.contenedorProducto:hover{
-    transform: scale(1.2);
-    transition: all 0.5s ease-in-out;
-    background-color: rgba(0, 255, 255, 0.295);
-}
-.productoFlex{
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-}
-.pesoSimbolo{
-    font-size: 10px;
-}
-.numeroPrecio{
-    font-size: 20px;
-}
-.precio{
-    display: flex;
-    justify-content: center;
-}
-.goHomeNav{
-    display: none;
-}
-.categoriaText{
-    display: none;
-}
-.buscarProductoText{
-    display: none;
-}
+    flex-wrap: wrap; }
+    .sectionCategoria .seccionCategoriaFlex .categoriaText {
+      display: none; }
+    .sectionCategoria .seccionCategoriaFlex .seccionCategoriaProperties {
+      font-size: 12px;
+      padding: 5px;
+      margin: 5px;
+      background-color: rgba(255, 255, 0, 0.637); }
+      .sectionCategoria .seccionCategoriaFlex .seccionCategoriaProperties:hover {
+        background-color: white; }
+
+.sectionVendido div h2, .sectionOferta div h2 {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.315);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+  font-size: 18px; }
+
+.sectionVendido div .productoFlex, .sectionOferta div .productoFlex {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap; }
+  .sectionVendido div .productoFlex .contenedorProducto, .sectionOferta div .productoFlex .contenedorProducto {
+    background-color: rgba(172, 255, 47, 0.212);
+    padding-bottom: 10px;
+    margin: 20px; }
+    .sectionVendido div .productoFlex .contenedorProducto:hover, .sectionOferta div .productoFlex .contenedorProducto:hover {
+      transform: scale(1.2);
+      transition: all 0.5s ease-in-out;
+      background-color: rgba(0, 255, 255, 0.295); }
+    .sectionVendido div .productoFlex .contenedorProducto div .imagenProducto, .sectionOferta div .productoFlex .contenedorProducto div .imagenProducto {
+      height: 100px;
+      width: 100px; }
+    .sectionVendido div .productoFlex .contenedorProducto .letraProducto, .sectionOferta div .productoFlex .contenedorProducto .letraProducto {
+      font-size: 12px;
+      margin-top: 5px; }
+      .sectionVendido div .productoFlex .contenedorProducto .letraProducto .precio, .sectionOferta div .productoFlex .contenedorProducto .letraProducto .precio {
+        display: flex;
+        justify-content: center; }
+        .sectionVendido div .productoFlex .contenedorProducto .letraProducto .precio .pesoSimbolo, .sectionOferta div .productoFlex .contenedorProducto .letraProducto .precio .pesoSimbolo {
+          font-size: 10px; }
+        .sectionVendido div .productoFlex .contenedorProducto .letraProducto .precio .numeroPrecio, .sectionOferta div .productoFlex .contenedorProducto .letraProducto .precio .numeroPrecio {
+          font-size: 20px; }
+
+.btn {
+  color: black; }
+
+.propertiesLogoTw {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%; }
+
 /*Propiedades registro.html*/
-.inputProperties{
-    width: 80%;
-    padding: 5px;
-    border: none;
-    margin: 3px;
-}
-.registroSeccion{
-    background-image: url(../img/maderaFondo.jpg);
-    display: flex;
-    justify-content: center;
-}
-.registroArticulo{
+.registroSeccion {
+  background-image: url(../img/maderaFondo.jpg);
+  display: flex;
+  justify-content: center; }
+  .registroSeccion .registroArticulo {
     background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
     padding: 30px;
-    min-height: 100vh;
-}
-#enviarFormularioRegistro{
-    padding: 5px;
-    width: 100px;
-    position: relative;
-    top: 15px;
-    left: 30%;
-}
-#textLabelRegistro{
-    height: 100px;
-    width: 80%;
-    border: none;
-}
+    min-height: 100vh; }
+    .registroSeccion .registroArticulo form div .inputProperties {
+      width: 80%;
+      padding: 5px;
+      border: none;
+      margin: 3px; }
+    .registroSeccion .registroArticulo form div label #textLabelRegistro {
+      height: 100px;
+      width: 80%;
+      border: none; }
+    .registroSeccion .registroArticulo form #enviarFormularioRegistro {
+      padding: 5px;
+      width: 100px;
+      position: relative;
+      top: 15px;
+      left: 30%; }
+
 /*Propiedades sesion.html*/
-.iniciarSesionDiv{
-    background-image: url(../img/maderaFondo.jpg);
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-}
-.imgInicioSesion{
-    height: 110px;
-    width: 110px;
-}
-.iniciarSesionSeccion{
+.iniciarSesionDiv {
+  background-image: url(../img/maderaFondo.jpg);
+  display: flex;
+  justify-content: center;
+  height: 100vh; }
+  .iniciarSesionDiv .iniciarSesionSeccion {
     background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
     padding: 30px;
     margin: 30px;
     border-radius: 10px;
     height: 250px;
-    width: 250;
-}
-.IniciarSesioncentrarElementos{
-    position: relative;
-    justify-content: center;
-}
+    width: 250; }
+    .iniciarSesionDiv .iniciarSesionSeccion div .imgInicioSesion {
+      height: 110px;
+      width: 110px; }
+
 /*Propiedades carrito.html*/
-.carritoSectionImg{
+#carritoFlex {
+  display: flex;
+  justify-content: start; }
+  #carritoFlex .carritoSectionImg {
     width: 40px;
     height: 40px;
     margin-top: 10px;
     margin-left: 10px;
-    border-radius: 10px;
-}
-.carritoSectionLista{
+    border-radius: 10px; }
+
+.carritoSectionFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; }
+  .carritoSectionFlex div ul .alinearElementos {
+    display: inline-block;
+    margin-top: 5px; }
+  .carritoSectionFlex div ul .carritoSectionLista {
     padding: 10px;
     margin-left: 20px;
     border: 1px solid black;
-    font-size: small;
-}
-#carritoFlex{
-    display: flex;
-    justify-content: start;
-}
-.carritoSectionFlex{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-}
-.carritoSectionVacio{
+    font-size: small; }
+  .carritoSectionFlex div .carritoSectionVacio {
     font-size: small;
     position: relative;
-    bottom: 50vh;
-}
-.alinearElementos{
-    display: inline-block;
-    margin-top: 5px;
-}
+    bottom: 50vh; }
+
 /*Propiedades noticias.html*/
-.articuloNoticia{
-    background-color: rgb(205, 205, 205);
+.seccionNoticia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .seccionNoticia .articuloNoticia {
+    background-color: #cdcdcd;
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid black; }
+    .seccionNoticia .articuloNoticia #articuloNoticiasTitulo {
+      text-align: center;
+      font-size: larger;
+      padding: 10px;
+      margin-bottom: 10px; }
+    .seccionNoticia .articuloNoticia .articuloNoticiasParrafo {
+      font-size: small;
+      margin-top: 80px; }
+    .seccionNoticia .articuloNoticia div .articuloNoticiasVideo {
+      margin-top: 15px;
+      width: 95%;
+      height: 315px; }
+
+.sectionCategoria {
+  grid-area: categoria; }
+
+.sectionVendido {
+  grid-area: vendido; }
+
+.sectionOferta {
+  grid-area: oferta; }
+
+.mainDivGrid {
+  display: grid;
+  grid-template-areas: "categoria" "oferta" "vendido"; }
+
+@media (min-width: 480px) {
+  .mainDivGrid {
+    grid-template-areas: "categoria" "vendido" "oferta"; }
+  #logo {
+    height: 50px;
+    width: 100px; } }
+
+@media (min-width: 768px) {
+  .mainDivGrid {
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 2fr 5fr;
+    grid-template-areas: "categoria vendido" "categoria oferta"; }
+  #logo {
+    height: 70px;
+    width: 140px; }
+    #logo:hover {
+      animation: logo 2s; }
+  @keyframes logo {
+    0% {
+      transform: rotate(-180deg); }
+    60% {
+      transform: scale(1.3); } }
+  .sectionCategoria {
     border: 1px solid black;
-}
-.seccionNoticia{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#articuloNoticiasTitulo{
-    text-align: center;
-    font-size: larger;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-.articuloNoticiasVideo{
-    margin-top: 15px;
-    width: 95%;
-    height: 315px;
-}
-.articuloNoticiasParrafo{
-    font-size: small;
-    margin-top: 80px;
-}
-.sectionCategoria{
-    grid-area: categoria;
-}
-.sectionVendido{
-    grid-area: vendido;
-}
-.sectionOferta{
-    grid-area: oferta;
-}
-.mainDivGrid{
-    display: grid;
-    grid-template-areas: 
-    "categoria"
-    "oferta"
-    "vendido";
-}
-@media (min-width:480px){
-    .mainDivGrid{
-        grid-template-areas: 
-        "categoria"
-        "vendido"
-        "oferta";
-    }
-    #logo{
-        height: 50px;
-        width: 100px;
-    }
-}
-@media (min-width:768px){
-    .mainDivGrid{
-        grid-template-columns: 1fr 6fr;
-        grid-template-rows: 2fr 5fr;
-        grid-template-areas: 
-        "categoria vendido"
-        "categoria oferta";
-    }
-    .goHomeNav{
-        display: initial;
-    }
-    #logo{
-        height: 70px;
-        width: 140px;
-    }
-    #logo:hover{
-        animation: logo 2s;
-    }
-    @keyframes logo {
-        0%{
-            transform: rotate(-180deg);
-        }
-        60%{
-            transform: scale(1.3);
-        }
-    }
-    .categoriaText{
+    min-height: 100vh;
+    margin: 1px; }
+    .sectionCategoria .seccionCategoriaFlex {
+      flex-direction: column; }
+      .sectionCategoria .seccionCategoriaFlex .categoriaText {
         display: initial;
         color: rgba(0, 0, 0, 0.315);
         font-size: 20px;
         padding: 10px;
         margin-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 255, 0.178);
-    }
-    .sectionCategoria{
-        border: 1px solid black;
-        min-height: 100vh;
-        margin: 1px;
-    }
-    .seccionCategoriaFlex{
-        flex-direction: column;
-        }
-    .seccionCategoriaProperties{
+        border-bottom: 1px solid rgba(0, 0, 255, 0.178); }
+      .sectionCategoria .seccionCategoriaFlex .seccionCategoriaProperties {
         padding: 10px;
-        font-size: 16px;    
-    }
-    h2{
-        text-align: start;
-        margin-left: 10px;
-        margin-top: 37px;
-        border-bottom: none;
-    }
-    .imagenProducto{
-        height: 150px;
-        width: 150px;
-    }
-    .letraProducto{
-        font-size: 14px;
-    }
-    .carritoSectionImg{
-        width: 80px;
-        height: 80px;
-    }
-    .carritoSectionLista{
-        font-size: 18px;
-    }
-    .carritoSectionVacio{
-        font-size: 16px;
-    }
-    .articuloNoticiasVideo{
-        width: 50%;
-        height: 415px;
-    }
-    .btnOcultar{
-        display: initial;
-    }
-}
-@media (min-width:992px){
-    #carritoImg{
-        display: initial;
-        height: 15px;
-        width: 15px;
-        border: 1px solid black;
-        border-radius: 5px;
-    }
-}
+        font-size: 16px; }
+  .sectionVendido div h2, .sectionOferta div h2 {
+    text-align: start;
+    margin-left: 10px;
+    margin-top: 37px;
+    border-bottom: none; }
+  .sectionVendido div .productoFlex .contenedorProducto div .imagenProducto, .sectionOferta div .productoFlex .contenedorProducto div .imagenProducto {
+    height: 150px;
+    width: 150px; }
+  .sectionVendido div .productoFlex .contenedorProducto .letraProducto, .sectionOferta div .productoFlex .contenedorProducto .letraProducto {
+    font-size: 14px; }
+  .carritoSectionImg {
+    width: 80px;
+    height: 80px; }
+  .carritoSectionLista {
+    font-size: 18px; }
+  .carritoSectionVacio {
+    font-size: 16px; }
+  .articuloNoticiasVideo {
+    width: 50%;
+    height: 415px; }
+  .btnOcultar {
+    display: initial; } }
+
+@media (min-width: 992px) {
+  #carritoImg {
+    display: initial;
+    height: 15px;
+    width: 15px;
+    border: 1px solid black;
+    border-radius: 5px; } }

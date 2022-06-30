@@ -1,0 +1,48 @@
+.sectionVendido, .sectionOferta{
+    div{
+        h2{
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.315);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+            font-size: 18px;
+        }
+        .productoFlex{
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+        
+            .contenedorProducto{
+                background-color: rgba(172, 255, 47, 0.212);  
+                padding-bottom: 10px;
+                margin: 20px;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: all 0.5s ease-in-out;
+                    background-color: rgba(0, 255, 255, 0.295);
+                }
+                div{
+                    .imagenProducto{
+                        height: 100px;
+                        width: 100px;
+                    }
+                }
+                .letraProducto{
+                    font-size: 12px;
+                    margin-top: 5px;
+        
+                    .precio{
+                        display: flex;
+                        justify-content: center;
+        
+                        .pesoSimbolo{
+                            font-size: 10px;
+                        }
+                        .numeroPrecio{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+#logo{
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    margin: 5px 20px 5px 5px;
+}
+#carritoImg{
+    display: none;
+}
+.btnOcultar{
+    display: none;
+}
+nav{
+    ul{
+        li{
+            &:hover{
+                transform: translate(5px, 5px);
+                background-color: rgba(0, 0, 255, 0.089);
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
