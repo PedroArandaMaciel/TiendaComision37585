@@ -1,9 +1,11 @@
+@import "../abstracts/operaciones";
+
 .sectionVendido, .sectionOferta{
     div{
         h2{
             margin-top: 10px;
-            color: rgba(0, 0, 0, 0.315);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+            color: map-get($estilos, colorBdif);
+            border-bottom: map-get($estilos, bordeB);
             font-size: 18px;
         }
         .productoFlex{
@@ -12,7 +14,7 @@
             flex-wrap: wrap;
         
             .contenedorProducto{
-                background-color: rgba(172, 255, 47, 0.212);  
+                background-color: map-get($estilos, bgColorProduc);  
                 padding-bottom: 10px;
                 margin: 20px;
                 &:hover{
@@ -31,8 +33,7 @@
                     margin-top: 5px;
         
                     .precio{
-                        display: flex;
-                        justify-content: center;
+                        @include flexCenter;
         
                         .pesoSimbolo{
                             font-size: 10px;

@@ -5,6 +5,8 @@
 @import "./layout/categorias";
 @import "./layout/productos";
 @import "./components/buttons";
+@import "./base/mixins";
+@import "./abstracts/operaciones";
 
 .propertiesLogoTw{
     height: 60px;
@@ -14,8 +16,7 @@
 /*Propiedades registro.html*/
 .registroSeccion{
     background-image: url(../img/maderaFondo.jpg);
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
 
     .registroArticulo{
         background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
@@ -52,14 +53,13 @@
 /*Propiedades sesion.html*/
 .iniciarSesionDiv{
     background-image: url(../img/maderaFondo.jpg);
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+    @include flexCenter;
+    min-height: 100vh;
 
     .iniciarSesionSeccion{
         background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
         padding: 30px;
-        margin: 30px;
+        margin: 20px;
         border-radius: 10px;
         height: 250px;
         width: 250;
@@ -69,14 +69,20 @@
                 height: 110px;
                 width: 110px;
             }
+            
+            .claveLogin{
+                margin: 2px;
+            }
+            
+            .claveLogin{
+                margin-bottom: 10px;
+            }
         }
     }
 }
 /*Propiedades carrito.html*/
 #carritoFlex{
-    display: flex;
-    justify-content: start;
-    
+    @include flexStart;
     .carritoSectionImg{
         width: 40px;
         height: 40px;
@@ -86,8 +92,7 @@
     }
 }
 .carritoSectionFlex{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
@@ -114,39 +119,52 @@
     }
 }
 /*Propiedades noticias.html*/
-.seccionNoticia{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    .articuloNoticia{
-        background-color: rgb(205, 205, 205);
-        min-height: 100vh;
-        width: 100%;
+.contNoticia{
+    .seccionNoticia{
         display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-        
-        #articuloNoticiasTitulo{
-            text-align: center;
-            font-size: larger;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        .articuloNoticiasParrafo{
-            font-size: small;
-            margin-top: 80px;
-        }
-
-        div{
-            .articuloNoticiasVideo{
-                margin-top: 15px;
-                width: 95%;
-                height: 315px;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        .articuloNoticia{
+            background-color: rgb(205, 205, 205);
+            min-height: 100vh;
+            width: 100%;
+            @include flexColumn;
+            border: 1px solid black;
+            
+            #articuloNoticiasTitulo{
+                text-align: center;
+                font-size: larger;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .articuloNoticiasParrafo{
+                font-size: small;
+                margin-top: 80px;
+            }
+    
+            div{
+                .articuloNoticiasVideo{
+                    margin-top: 15px;
+                    width: 95%;
+                    height: 315px;
+                }
             }
         }
     }
+    
+    section{
+        @extend .seccionNoticia;
+        justify-content: space-around;
+        .box{
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 200px;
+        }
+    }
 }
+
 .sectionCategoria{
     grid-area: categoria;
 }

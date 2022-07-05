@@ -1,10 +1,10 @@
+@import "../base/mixins";
+
 .sectionCategoria{
-    border: 1px solid black;
     margin: 1px;
 
     .seccionCategoriaFlex{
-        display: flex;
-        justify-content: center;
+        @include flexCenter;
         flex-wrap: wrap;
 
         .categoriaText{

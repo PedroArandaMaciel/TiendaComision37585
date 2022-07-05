@@ -46,7 +46,6 @@ nav ul li:hover {
   border-radius: 5px; }
 
 .sectionCategoria {
-  border: 1px solid black;
   margin: 1px; }
   .sectionCategoria .seccionCategoriaFlex {
     display: flex;
@@ -61,6 +60,18 @@ nav ul li:hover {
       background-color: rgba(255, 255, 0, 0.637); }
       .sectionCategoria .seccionCategoriaFlex .seccionCategoriaProperties:hover {
         background-color: white; }
+
+.box--1 {
+  background-color: rgba(255, 0, 0, 0.452); }
+
+.box--2 {
+  background-color: rgba(0, 0, 255, 0.322); }
+
+.box--3 {
+  background-color: white; }
+
+.box--4 {
+  background-color: beige; }
 
 .sectionVendido div h2, .sectionOferta div h2 {
   margin-top: 10px;
@@ -97,6 +108,18 @@ nav ul li:hover {
 .btn {
   color: black; }
 
+.box--1 {
+  background-color: rgba(255, 0, 0, 0.452); }
+
+.box--2 {
+  background-color: rgba(0, 0, 255, 0.322); }
+
+.box--3 {
+  background-color: white; }
+
+.box--4 {
+  background-color: beige; }
+
 .propertiesLogoTw {
   height: 60px;
   width: 60px;
@@ -132,17 +155,21 @@ nav ul li:hover {
   background-image: url(../img/maderaFondo.jpg);
   display: flex;
   justify-content: center;
-  height: 100vh; }
+  min-height: 100vh; }
   .iniciarSesionDiv .iniciarSesionSeccion {
     background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
     padding: 30px;
-    margin: 30px;
+    margin: 20px;
     border-radius: 10px;
     height: 250px;
     width: 250; }
     .iniciarSesionDiv .iniciarSesionSeccion div .imgInicioSesion {
       height: 110px;
       width: 110px; }
+    .iniciarSesionDiv .iniciarSesionSeccion div .claveLogin {
+      margin: 2px; }
+    .iniciarSesionDiv .iniciarSesionSeccion div .claveLogin {
+      margin-bottom: 10px; }
 
 /*Propiedades carrito.html*/
 #carritoFlex {
@@ -175,29 +202,37 @@ nav ul li:hover {
     bottom: 50vh; }
 
 /*Propiedades noticias.html*/
-.seccionNoticia {
+.contNoticia .seccionNoticia, .contNoticia section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
-  .seccionNoticia .articuloNoticia {
+  .contNoticia .seccionNoticia .articuloNoticia, .contNoticia section .articuloNoticia {
     background-color: #cdcdcd;
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     border: 1px solid black; }
-    .seccionNoticia .articuloNoticia #articuloNoticiasTitulo {
+    .contNoticia .seccionNoticia .articuloNoticia #articuloNoticiasTitulo, .contNoticia section .articuloNoticia #articuloNoticiasTitulo {
       text-align: center;
       font-size: larger;
       padding: 10px;
       margin-bottom: 10px; }
-    .seccionNoticia .articuloNoticia .articuloNoticiasParrafo {
+    .contNoticia .seccionNoticia .articuloNoticia .articuloNoticiasParrafo, .contNoticia section .articuloNoticia .articuloNoticiasParrafo {
       font-size: small;
       margin-top: 80px; }
-    .seccionNoticia .articuloNoticia div .articuloNoticiasVideo {
+    .contNoticia .seccionNoticia .articuloNoticia div .articuloNoticiasVideo, .contNoticia section .articuloNoticia div .articuloNoticiasVideo {
       margin-top: 15px;
       width: 95%;
       height: 315px; }
+
+.contNoticia section {
+  justify-content: space-around; }
+  .contNoticia section .box {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px; }
 
 .sectionCategoria {
   grid-area: categoria; }

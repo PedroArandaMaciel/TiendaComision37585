@@ -1,0 +1,16 @@
+$cajas:(
+    1: rgba(255, 0, 0, 0.452),
+    2: rgba(0, 0, 255, 0.322),
+    3: white,
+    4: beige,
+);
+@each $caja, $color in $cajas{
+    .box--#{$caja}{
+        background-color: $color;
+    }
+}
+$estilos: (
+   colorBdif: rgba(0, 0, 0, 0.315),
+   bordeB: 1px solid rgba(0, 0, 0, 0.452),
+   bgColorProduc: rgba(172, 255, 47, 0.212)
+);
