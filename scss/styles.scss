@@ -221,7 +221,7 @@
     .sectionCategoria{
         border: 1px solid black;
         min-height: 100vh;
-        margin: 1px;
+        margin: 5px 2px 5px 2px;
 
         .seccionCategoriaFlex{
             flex-direction: column;
@@ -248,11 +248,19 @@
                 text-align: start;
                 margin-left: 10px;
                 margin-top: 37px;
+                margin-bottom: 20px;
                 border-bottom: none;
             }
 
             .productoFlex{
+                justify-content: start;
+                margin: 12px;
                 .contenedorProducto{
+                    &:hover{
+                        transform: scale(1.2);
+                        background-color: rgba(0, 8, 8, 0.178);
+                    }
+                    margin: 10px;
                     div{
                         .imagenProducto{
                             height: 150px;

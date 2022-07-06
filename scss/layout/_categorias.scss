@@ -1,9 +1,9 @@
 @import "../base/mixins";
+@import "../abstracts/operaciones";
 
 .sectionCategoria{
-    margin: 1px;
-
     .seccionCategoriaFlex{
+        margin-top: 5px;
         @include flexCenter;
         flex-wrap: wrap;
 
@@ -18,7 +18,8 @@
             background-color: $color3;
 
             &:hover{
-                background-color: $color4;
+                background-color: map-get($estilos, bgColorHover);
+                font-weight: bolder;
             }
         }
     }

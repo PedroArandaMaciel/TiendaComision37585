@@ -10,14 +10,18 @@
 .btnOcultar{
     display: none;
 }
-nav{
+#navbarSupportedContent{
     ul{
-        li{
+        .nav-item{
+            border: 1px solid black;
+            margin: 2px;
+            margin-left: 10px;
             &:hover{
-                transform: translate(5px, 5px);
+                transform: translate(2px, 2px);
                 background-color: rgba(0, 0, 255, 0.089);
                 border: none;
                 border-radius: 5px;
+                font-weight: bolder;
             }
         }
     }
