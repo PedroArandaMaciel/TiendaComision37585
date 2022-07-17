@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -158,7 +159,7 @@ main {
       padding: 5px;
       border: none;
       margin: 3px; }
-    .registroSeccion .registroArticulo form div label #textLabelRegistro {
+    .registroSeccion .registroArticulo form div label .textLabelRegistro {
       height: 100px;
       width: 80%;
       border: none; }
@@ -170,55 +171,95 @@ main {
       left: 30%; }
 
 /*Propiedades sesion.html*/
-.iniciarSesionDiv {
+.contenedorSesion {
   background-image: url(../img/maderaFondo.jpg);
-  display: flex;
-  justify-content: center;
-  min-height: 100vh; }
-  .iniciarSesionDiv .iniciarSesionSeccion {
-    background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    height: 250px;
-    width: 250; }
-    .iniciarSesionDiv .iniciarSesionSeccion div .imgInicioSesion {
-      height: 110px;
-      width: 110px; }
-    .iniciarSesionDiv .iniciarSesionSeccion div .claveLogin {
-      margin: 2px; }
-    .iniciarSesionDiv .iniciarSesionSeccion div .claveLogin {
-      margin-bottom: 10px; }
-
-/*Propiedades carrito.html*/
-#carritoFlex {
-  display: flex;
-  justify-content: start; }
-  #carritoFlex .carritoSectionImg {
-    width: 40px;
-    height: 40px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border-radius: 10px; }
-
-.carritoSectionFlex {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  height: 100vh; }
-  .carritoSectionFlex div ul .alinearElementos {
-    display: inline-block;
-    margin-top: 5px; }
-  .carritoSectionFlex div ul .carritoSectionLista {
+  align-items: center; }
+  .contenedorSesion .ofertasExclusivas {
+    background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
+    width: 100%;
     padding: 10px;
-    margin-left: 20px;
-    border: 1px solid black;
-    font-size: small; }
-  .carritoSectionFlex div .carritoSectionVacio {
-    font-size: small;
-    position: relative;
-    bottom: 50vh; }
+    margin-top: 5px;
+    border-radius: 10px; }
+    .contenedorSesion .ofertasExclusivas h3 {
+      font-weight: bold; }
+  .contenedorSesion .iniciarSesionDiv {
+    width: 95%;
+    display: flex;
+    justify-content: center; }
+    .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion {
+      background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion div .imgInicioSesion {
+        height: 110px;
+        width: 110px; }
+      .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion div .mailLogin {
+        margin: 5px 0px 5px 0px;
+        padding: 5px;
+        width: 80%; }
+      .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion div .claveLogin {
+        margin: 5px 0px 5px 0px;
+        margin-bottom: 25px;
+        padding: 5px;
+        width: 80%; }
+      .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion div .loginInp {
+        padding: 2px;
+        margin: 2px; }
+        .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion div .loginInp:hover {
+          transform: translate(1px, 1px); }
+    .contenedorSesion .iniciarSesionDiv a {
+      color: #0dffa2; }
+      .contenedorSesion .iniciarSesionDiv a:hover {
+        color: black; }
+  .contenedorSesion .advertenciasLogin {
+    color: white;
+    background-color: #333c87;
+    border: 2px dashed black;
+    min-width: 100%; }
+
+/*Propiedades carrito.html*/
+.contenedorCarrito {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .contenedorCarrito section #carritoDiv {
+    position: absolute; }
+    .contenedorCarrito section #carritoDiv .carritoDivImg {
+      display: none;
+      width: 40px;
+      height: 40px;
+      margin-top: 25px;
+      margin-left: 20px; }
+  .contenedorCarrito section .sectioneElementos {
+    min-height: 70vh;
+    margin: 10px;
+    border: 1px solid white; }
+    .contenedorCarrito section .sectioneElementos .sectionElementosTop {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.308); }
+    .contenedorCarrito section .sectioneElementos div ul .alinearElementos {
+      display: inline-block; }
+    .contenedorCarrito section .sectioneElementos div ul .carritoSectionLista {
+      padding: 10px;
+      margin-left: 20px;
+      margin-top: 10px;
+      border: 1px solid black;
+      font-size: medium; }
+    .contenedorCarrito section .sectioneElementos div .carritoSectionVacio {
+      font-size: medium;
+      margin-top: 100px; }
+  .contenedorCarrito .carousel-item .tamañoImagenesCarousel {
+    height: 200px;
+    width: 100%; }
 
 /*Propiedades noticias.html*/
 .contNoticia .seccionNoticia, .contNoticia section {
@@ -271,9 +312,13 @@ main {
     grid-template-areas: "categoria" "vendido" "oferta"; }
   #logo {
     height: 50px;
-    width: 100px; } }
+    width: 100px; }
+  .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion {
+    width: 70%; } }
 
 @media (min-width: 768px) {
+  .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion {
+    width: 60%; }
   .mainDivGrid {
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 2fr 5fr;
@@ -284,10 +329,12 @@ main {
     #logo:hover {
       animation: logo 2s; }
   @keyframes logo {
-    0% {
-      transform: rotate(-180deg); }
-    60% {
-      transform: scale(1.3); } }
+    10% {
+      transform: rotate(5deg); }
+    30% {
+      transform: rotate(-5deg); }
+    80% {
+      transform: scale(1.1); } }
   .sectionCategoria {
     border: 1px solid black;
     min-height: 100vh;
@@ -323,14 +370,9 @@ main {
         width: 150px; }
       .sectionVendido div .productoFlex .contenedorProducto .letraProducto, .sectionOferta div .productoFlex .contenedorProducto .letraProducto {
         font-size: 14px; }
-  .carritoSectionImg {
-    width: 80px;
-    height: 80px; }
-  .carritoSectionLista {
-    font-size: 18px; }
-  .carritoSectionVacio {
-    font-size: 16px; }
-  .articuloNoticiasVideo {
+  .contenedorCarrito section #carritoDiv .carritoDivImg {
+    display: initial; }
+  .contNoticia .seccionNoticia .articuloNoticia div .articuloNoticiasVideo, .contNoticia section .articuloNoticia div .articuloNoticiasVideo {
     width: 50%;
     height: 415px; }
   .btnOcultar {
@@ -340,6 +382,6 @@ main {
   #carritoImg {
     display: initial;
     height: 15px;
-    width: 15px;
-    border: 1px solid black;
-    border-radius: 5px; } }
+    width: 15px; }
+  .contenedorSesion .iniciarSesionDiv .iniciarSesionSeccion {
+    width: 35%; } }

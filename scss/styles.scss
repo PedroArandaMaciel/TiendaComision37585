@@ -32,7 +32,7 @@
                     margin: 3px;
                 }
                 label{
-                    #textLabelRegistro{
+                    .textLabelRegistro{
                         height: 100px;
                         width: 80%;
                         border: none;
@@ -51,71 +51,127 @@
     }
 }
 /*Propiedades sesion.html*/
-.iniciarSesionDiv{
+.contenedorSesion{
     background-image: url(../img/maderaFondo.jpg);
-    @include flexCenter;
     min-height: 100vh;
-
-    .iniciarSesionSeccion{
-        background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
-        padding: 30px;
-        margin: 20px;
-        border-radius: 10px;
-        height: 250px;
-        width: 250;
-
-        div{
-            .imgInicioSesion{
-                height: 110px;
-                width: 110px;
-            }
-            
-            .claveLogin{
-                margin: 2px;
-            }
-            
-            .claveLogin{
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
-/*Propiedades carrito.html*/
-#carritoFlex{
-    @include flexStart;
-    .carritoSectionImg{
-        width: 40px;
-        height: 40px;
-        margin-top: 10px;
-        margin-left: 10px;
-        border-radius: 10px;
-    }
-}
-.carritoSectionFlex{
     @include flexColumn;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
 
-    div{
-        ul{
-            .alinearElementos{
-                display: inline-block;
-                margin-top: 5px;
-            }
-            .carritoSectionLista{
-                padding: 10px;
-                margin-left: 20px;
-                border: 1px solid black;
-                font-size: small;
-            }
+    .ofertasExclusivas{
+        background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 10px;
+        h3{
+            font-weight: bold;
         }
-        .carritoSectionVacio{
-            font-size: small;
-            position: relative;
-            bottom: 50vh;
-        }
+    }
+
+    .iniciarSesionDiv{
+        width: 95%;
+        @include flexCenter;
         
+        .iniciarSesionSeccion{
+            background: linear-gradient(to bottom left, cyan 30%, palegoldenrod 70%);
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            height: 350px;
+            @include flexCenter;
+            flex-direction: column;
+    
+            div{
+                .imgInicioSesion{
+                    height: 110px;
+                    width: 110px;
+                }
+                .mailLogin{
+                    margin: 5px 0px 5px 0px;
+                    padding: 5px;
+                    width: 80%;
+                }
+                .claveLogin{
+                    margin: 5px 0px 5px 0px;
+                    margin-bottom: 25px;
+                    padding: 5px;
+                    width: 80%;
+                }
+                .loginInp{
+                    padding: 2px;
+                    margin: 2px;
+                    &:hover{
+                        transform: translate(1px, 1px);
+                    }      
+                }
+            }
+        }
+    
+        a{
+            color: rgb(13, 255, 162);
+            &:hover{
+                color: black;
+            }
+        }
+    }
+    .advertenciasLogin{
+        color: white;
+        background-color: #333c87;
+        border: 2px dashed black;
+        min-width: 100%;
+    }
+}
+/*Propiedades carrito.html*/
+.contenedorCarrito{
+    height: 100vh;
+    @include flexColumn;
+    justify-content: space-between;
+    section{
+        #carritoDiv{
+            position: absolute;
+            .carritoDivImg{
+                display: none;
+                width: 40px;
+                height: 40px;
+                margin-top: 25px;
+                margin-left: 20px;
+            }
+        }
+        .sectioneElementos{
+            min-height: 70vh;
+            margin: 10px;
+            border: 1px solid rgb(255, 255, 255);
+        
+            .sectionElementosTop{
+                border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+            }
+            div{
+                ul{
+                    .alinearElementos{
+                        display: inline-block;
+                    }
+                    .carritoSectionLista{
+                        padding: 10px;
+                        margin-left: 20px;
+                        margin-top: 10px;
+                        border: 1px solid black;
+                        font-size: medium;
+                    }
+                }
+                .carritoSectionVacio{
+                    font-size: medium;
+                    margin-top: 100px;
+                }
+                
+            }
+        }
+    }
+    .carousel-item{
+        .tamañoImagenesCarousel{
+            height: 200px;
+            width: 100%;
+        }
     }
 }
 /*Propiedades noticias.html*/
@@ -152,7 +208,6 @@
             }
         }
     }
-    
     section{
         @extend .seccionNoticia;
         justify-content: space-around;
@@ -164,7 +219,6 @@
         }
     }
 }
-
 .sectionCategoria{
     grid-area: categoria;
 }
@@ -192,8 +246,22 @@
         height: 50px;
         width: 100px;
     }
+    .contenedorSesion{
+        .iniciarSesionDiv{
+            .iniciarSesionSeccion{
+                width: 70%;
+            }
+        }
+    }
 }
 @media (min-width:768px){
+    .contenedorSesion{
+        .iniciarSesionDiv{
+            .iniciarSesionSeccion{
+                width: 60%;
+            }
+        }
+    }
     .mainDivGrid{
         grid-template-columns: 1fr 6fr;
         grid-template-rows: 2fr 5fr;
@@ -209,15 +277,17 @@
             animation: logo 2s;
         }
         @keyframes logo {
-            0%{
-                transform: rotate(-180deg);
+            10%{
+                transform: rotate(5deg);
             }
-            60%{
-                transform: scale(1.3);
+            30%{
+                transform: rotate(-5deg);
+            }
+            80%{
+                transform: scale(1.1);
             }
         }
     }
-
     .sectionCategoria{
         border: 1px solid black;
         min-height: 100vh;
@@ -241,7 +311,6 @@
             }
         }
     }
-
     .sectionVendido, .sectionOferta{
         div{
             h2{
@@ -274,19 +343,26 @@
             }
         }
     }
-    .carritoSectionImg{
-        width: 80px;
-        height: 80px;
+    .contenedorCarrito{
+        section{
+            #carritoDiv{
+                .carritoDivImg{
+                    display: initial;
+                }
+            }
+        }
     }
-    .carritoSectionLista{
-        font-size: 18px;
-    }
-    .carritoSectionVacio{
-        font-size: 16px;
-    }
-    .articuloNoticiasVideo{
-        width: 50%;
-        height: 415px;
+    .contNoticia{
+        .seccionNoticia{
+            .articuloNoticia{
+                div{
+                    .articuloNoticiasVideo{
+                        width: 50%;
+                        height: 415px;
+                    }
+                }
+            }
+        }
     }
     .btnOcultar{
         display: initial;
@@ -297,7 +373,12 @@
         display: initial;
         height: 15px;
         width: 15px;
-        border: 1px solid black;
-        border-radius: 5px;
+    }
+    .contenedorSesion{
+        .iniciarSesionDiv{
+            .iniciarSesionSeccion{
+                width: 35%;
+            }
+        }
     }
 }

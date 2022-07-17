@@ -41,8 +41,12 @@
                             <a class="nav-link" href="sesion.html">Iniciar Sesion</a>
                         </li>
                         <li class="nav-item d-flex align-items-center justify-content-center">
-                            <a class="nav-link" href="carrito.html"><img id="carritoImg" src="../img/carrito.jpg"
+                            <a class="nav-link" href="carrito.html"><img id="carritoImg"
+                                    src="https://img.icons8.com/ios-glyphs/90/000000/lift-cart-here.png"
                                     alt="ir a seccion carrito">Carrito</a>
+                        </li>
+                        <li class="nav-item navNoticias d-flex align-items-center justify-content-center">
+                            <a class="nav-link" href="noticias.html">Noticias</a>
                         </li>
                     </ul>
                 </div>
@@ -50,21 +54,40 @@
         </nav>
     </header>
     <main>
-        <div class="iniciarSesionDiv">
-            <section class="iniciarSesionSeccion">
+        <div class="contenedorSesion">
+            <div class="ofertasExclusivas">
+                <h3>Inicia sesion para Ofertas Exclusivas </h3>
+            </div>
+            <div class="iniciarSesionDiv">
+                <section class="iniciarSesionSeccion">
+                    <div>
+                        <img class="imgInicioSesion" src="../img/welcomeBack.png" alt="Imagen de bienvenido de nuevo">
+                    </div>
+                    <div>
+                        <input class="mailLogin" type="text" name="mailLogin" placeholder="Ingrese su email">
+                    </div>
+                    <div>
+                        <input class="claveLogin" type="password" name="PassLogin" placeholder="Ingrese su clave">
+                    </div>
+                    <div>
+                        <div>
+                            <input class="loginInp" type="submit" value="Login">
+                            <input class="loginInp" type="button" value="Crear Cuenta"
+                                onclick="location.href='registro.html';">
+                            <input class="loginInp" type="submit" value="Reset Password">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="advertenciasLogin">
                 <div>
-                    <img class="imgInicioSesion" src="../img/welcomeBack.png" alt="Imagen de bienvenido de nuevo">
+                    <img src="https://img.icons8.com/color/48/000000/general-warning-sign.png" />
                 </div>
-                <div>
-                    <input class="mailLogin" type="text" name="mailLogin" placeholder="Ingrese su email">
-                </div>
-                <div>
-                    <input class="claveLogin" type="password" name="PassLogin" placeholder="Ingrese su clave">
-                </div>
-                <div>
-                    <input type="submit" value="Login">
-                </div>
-            </section>
+                <p>
+                    Ningun empleado de la plataforma va a pedirte tu clave, por ningun motivo la compartas.
+                </p>
+                <h4>Si ves movimientos sospechosos <a href="#">congela tu cuenta desde aqui</a></h4>
+            </div>
         </div>
     </main>
     <footer>
