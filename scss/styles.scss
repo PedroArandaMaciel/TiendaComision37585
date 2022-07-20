@@ -141,7 +141,7 @@
         .sectioneElementos{
             min-height: 70vh;
             margin: 10px;
-            border: 1px solid rgb(255, 255, 255);
+            border: 1px solid rgba(255, 255, 255, 0.616);
         
             .sectionElementosTop{
                 border-bottom: 1px solid rgba(255, 255, 255, 0.308);
@@ -176,27 +176,23 @@
 }
 /*Propiedades noticias.html*/
 .contNoticia{
+    background-color: rgb(205, 205, 205);
     .seccionNoticia{
+        min-height: 100vh;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    
+        flex-direction: column;
+        justify-content: space-between;
+
         .articuloNoticia{
-            background-color: rgb(205, 205, 205);
-            min-height: 100vh;
             width: 100%;
             @include flexColumn;
-            border: 1px solid black;
+            
             
             #articuloNoticiasTitulo{
-                text-align: center;
-                font-size: larger;
-                padding: 10px;
-                margin-bottom: 10px;
-            }
-            .articuloNoticiasParrafo{
-                font-size: small;
-                margin-top: 80px;
+                h6{
+                    font-size: 20px;
+                    padding-top: 20px;
+                }
             }
     
             div{
@@ -207,15 +203,51 @@
                 }
             }
         }
+        .articuloNoticiasParrafo{
+            font-size: small;
+            margin-top: 80px;
+        }
     }
-    section{
-        @extend .seccionNoticia;
-        justify-content: space-around;
-        .box{
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            width: 200px;
+    #seccionNotiReporteros{
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap; 
+        border: 1px solid black;
+        h7{
+            padding: 10px 0px 10px 0px;
+            font-weight: bold
+        }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+         
+            .box{
+                padding: 20px;
+                margin: 10px;
+                border-radius: 10px;
+                width: 250px;
+
+                div{
+                    .notiReporterosImg{
+                        height: 200px;
+                        width: 200px;
+                    }
+                }
+                .nombreEquipo{
+                    padding: 5px;
+                    width: 100%;
+                    p{
+                        font-size: 18px;
+                    }
+                }
+                .descripcionEquipo{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
 }
@@ -264,7 +296,7 @@
     }
     .mainDivGrid{
         grid-template-columns: 1fr 6fr;
-        grid-template-rows: 2fr 5fr;
+        grid-template-rows: 2fr 2fr;
         grid-template-areas: 
         "categoria vendido"
         "categoria oferta";
@@ -298,7 +330,7 @@
 
             .categoriaText{
                 display: initial;
-                color: rgba(0, 0, 0, 0.315);
+                color: rgba(0, 0, 0, 0.856);
                 font-size: 20px;
                 padding: 10px;
                 margin-bottom: 10px;
@@ -353,14 +385,29 @@
         }
     }
     .contNoticia{
+        padding: 10px;
         .seccionNoticia{
+            border: 1px solid black;
             .articuloNoticia{
                 div{
                     .articuloNoticiasVideo{
-                        width: 50%;
-                        height: 415px;
+                        width: 70%;
+                        height: 515px;
                     }
                 }
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                p{
+                    width: 70%;
+                }
+            }
+        }
+        #seccionNotiReporteros{
+            border: none;
+            div{
+                border: none;
             }
         }
     }
