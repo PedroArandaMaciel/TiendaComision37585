@@ -228,7 +228,7 @@ main {
 
 /*Propiedades carrito.html*/
 .contenedorCarrito {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
@@ -258,7 +258,7 @@ main {
       font-size: medium;
       margin-top: 100px; }
   .contenedorCarrito .carousel-item .tamañoImagenesCarousel {
-    height: 200px;
+    height: 250px;
     width: 100%; }
 
 /*Propiedades noticias.html*/
@@ -395,8 +395,8 @@ main {
     .contNoticia .seccionNoticia {
       border: 1px solid black; }
       .contNoticia .seccionNoticia .articuloNoticia div .articuloNoticiasVideo {
-        width: 70%;
-        height: 515px; }
+        width: 60%;
+        height: 415px; }
       .contNoticia .seccionNoticia div {
         display: flex;
         justify-content: center; }

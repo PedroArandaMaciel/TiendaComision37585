@@ -124,7 +124,7 @@
 }
 /*Propiedades carrito.html*/
 .contenedorCarrito{
-    height: 100vh;
+    min-height: 100vh;
     @include flexColumn;
     justify-content: space-between;
     section{
@@ -169,7 +169,7 @@
     }
     .carousel-item{
         .tamañoImagenesCarousel{
-            height: 200px;
+            height: 250px;
             width: 100%;
         }
     }
@@ -391,8 +391,8 @@
             .articuloNoticia{
                 div{
                     .articuloNoticiasVideo{
-                        width: 70%;
-                        height: 515px;
+                        width: 60%;
+                        height: 415px;
                     }
                 }
             }
